@@ -11,16 +11,16 @@
 </head>
 
 <body>
-  <a-scene mindar-image="imageTargetSrc: https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/mindar/QiaFan-LiHua-MultiTargets.mind;" vr-mode-ui="enabled: false"
+  <a-scene mindar-image="imageTargetSrc: Mindjs-Targets\QiaFan-LiHua-MultiTargets.mind;" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-assets>
       <!--QiaFan -->
-      <video id="qiafan" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/QiaFan.mp4" type="video/webm" loop="true" playsinline autoplay
+      <video id="qiafan" src="Media\QiaFan.mp4" type="video/webm" loop="true" playsinline autoplay
         data-wf-ignore="true" data-object-fit="cover"></video>
       <!-- LiHua -->
-      <video id="lihua" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/LiHua.mp4" type="video/webm" loop="true" playsinline autoplay
+      <video id="lihua" src="Media\LiHua.mp4" type="video/webm" loop="true" playsinline autoplay
         data-wf-ignore="true" data-object-fit="cover"></video>
     </a-assets>
 
@@ -35,7 +35,7 @@
     </a-entity>
   </a-scene>
 
-  <script src="playVideo.js"></script>
+  <script  type="text/javascript" src="playVideo.js"></script>
 </body>
 
 </html>
