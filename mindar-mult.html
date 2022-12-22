@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+
+<body>
+  <a-scene mindar-image="imageTargetSrc: https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/mindar/QiaFan-LiHua-MultiTargets.mind;" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-assets>
+      <!--QiaFan -->
+      <video id="qiafan" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/QiaFan.mp4" type="video/webm" loop="true" playsinline autoplay
+        data-wf-ignore="true" data-object-fit="cover"></video>
+      <!-- LiHua -->
+      <video id="lihua" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/LiHua.mp4" type="video/webm" loop="true" playsinline autoplay
+        data-wf-ignore="true" data-object-fit="cover"></video>
+    </a-assets>
+
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-video src="#qiafan" position="0, 0, 0" rotate="0, 0, 0" height="1" width="1">
+      </a-video>
+    </a-entity>
+
+    <a-entity mindar-image-target="targetIndex: 1">
+      <a-video src="#lihua" position="0, 0, 0" rotate="0, 0, 0" height="1" width="1">
+      </a-video>
+    </a-entity>
+  </a-scene>
+
+  <script src="playVideo.js"></script>
+</body>
+
+</html>
