@@ -33,6 +33,7 @@ a:hover {
 .des {
   color: #9a9c9e;
   mix-blend-mode: difference;
+  margin-bottom: 1rem;
 }
 
 .p5Canvas {
@@ -64,6 +65,12 @@ a:hover {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0rem;
+}
+
+.content  .device {
+  /* margin-bottom: 1rem; */
+  color: rgb(69, 243, 130);
+  /* color:  #9a9c9e; */
 }
 
 .content .title-img {
