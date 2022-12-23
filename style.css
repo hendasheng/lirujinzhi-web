@@ -74,6 +74,7 @@ a:hover {
 }
 
 .content .title-img {
+  display: inline-block;
   width: 25%;
   margin-top: 1rem;
 }
