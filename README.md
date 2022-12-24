@@ -1,8 +1,19 @@
 # 立入 Web AR 1.0
 
-## 当前配置
-* 阿里云云虚拟主机；
-* 阿里云 OSS 储存；
+## 引用库
+- [MindAR.js](https://hiukim.github.io/mind-ar-js-doc/) - 2D、3D
+  - 浏览器运行，全平台支持；
+  - 所有 AR 内容需要图像追踪（扫描目标图像，显示相应内容）；
+  - **内容文件格式：**
+    - 目标文件：[.mind](https://hiukim.github.io/mind-ar-js-doc/tools/compile)
+    - 视频：MP4
+    - 3D 文件： gltf（嵌入贴图）
+      - [3D模型格式说明](https://threejs.org/docs/#manual/zh/introduction/Loading-3D-models)
+- [ARKit 快速查看](https://developer.apple.com/cn/documentation/arkit/previewing_a_model_with_ar_quick_look/) - 3D
+  - 浏览器运行，调用 iOS 设备摄像头和运动功能，仅支持 iOS 11.0+ 设备；
+  - 不需要图像追踪，通过摄像头计算空间位置显示 3D 内容；
+  - **内容文件格式：**
+     - USDZ（通过苹果官方的 AR 创作工具 [Reality Converter](https://developer.apple.com/cn/augmented-reality/tools/) 转换）
 
 ## 文件大小
 文件大小直接影响加载速度，尽可能缩减文件大小，保持顺畅浏览体验。
@@ -15,14 +26,9 @@
 
 动态文件（视频/3d）做成无限循环动画是不错的办法，既能缩减文件大小，还能假装一直在动。
 
-
-## 文件格式
-- 图像追踪（MindAR）
-  - 视频 -> mp4
-  - 3d -> gltf（嵌入贴图）
-
-- ARKit
-  - 3d -> USDZ
+## 运行配置
+* 阿里云云虚拟主机；
+* 阿里云 OSS 储存；
 
 ## 问题
 - **2022.12 - 测试**
@@ -44,5 +50,5 @@
 
 - **2022.12.22 - 3D 部分的问题**
   - ARKit（3D） 体验最好，但是在 Android 设备上不灵；
-  - [Mindar.js](https://hiukim.github.io/mind-ar-js-doc/) 支持全平台，但是不能做真实空间计算，仍然需要目标图像，作为候补选项。
+  - MindAR 支持全平台，但是不能做真实空间计算，仍然需要目标图像，作为候补选项。
     - 测试中用到 30M、60M 动画文件（gltf），响应速度慢到不行，要注意文件大小，目前用到的动画文件是 1.1M（恰饭）、623k（立花）。
