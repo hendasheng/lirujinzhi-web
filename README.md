@@ -37,11 +37,10 @@
   - [Mindar.js](https://hiukim.github.io/mind-ar-js-doc/) 测试；
   - iOS 端不允许自动播放视频，通过 [playVideo.js](playVideo.js) 强制开启；
   - [ARKit](https://developer.apple.com/cn/documentation/arkit/) 测试；
-  - 3d 文件格式测试
+  - 3d 文件格式测试；
 
 - **2022.12.21**
-  - 用 [Glitch](https://glitch.com/) 服务器是最便捷的方式，测试过程中服务器速度稍慢，但还可以接受。今晚变得奇慢无比，已经不能正常访问了；
-  - [Github Page](https://pages.github.com/) 也存在访问不稳定的问题；
+  -  [Glitch](https://glitch.com/) 、[Github Page](https://pages.github.com/)  访问速度不稳定。
 
 - **2022.12.22 - 服务器**
   - 切换到阿里云虚拟主机； 
@@ -59,4 +58,4 @@
   - [checkDevice.js](checkDevice.js) 检测设备，根据设备展示不同内容。
     - 桌面端关闭 AR 入口，增加顶部提示；
     - Android 关闭 ARKit 入口；
-    - iOS 不用管；
+    - iOS 啥都行，不用管；
