@@ -15,6 +15,8 @@
   - **内容文件格式：**
      - USDZ（通过苹果官方的 AR 创作工具 [Reality Converter](https://developer.apple.com/cn/augmented-reality/tools/) 转换）
 
+- [Device.js](https://github.com/matthewhudson/current-device) - 检测设备
+
 ## 文件大小
 文件大小直接影响加载速度，尽可能缩减文件大小，保持顺畅浏览体验。
 
@@ -30,7 +32,7 @@
 * 阿里云云虚拟主机；
 * 阿里云 OSS 储存；
 
-## 问题
+## 优化
 - **2022.12 - 测试**
   - [Mindar.js](https://hiukim.github.io/mind-ar-js-doc/) 测试；
   - iOS 端不允许自动播放视频，通过 [playVideo.js](playVideo.js) 强制开启；
@@ -52,3 +54,9 @@
   - ARKit（3D） 体验最好，但是在 Android 设备上不灵；
   - MindAR 支持全平台，但是不能做真实空间计算，仍然需要目标图像，作为候补选项。
     - 测试中用到 30M、60M 动画文件（gltf），响应速度慢到不行，要注意文件大小，目前用到的动画文件是 1.1M（恰饭）、623k（立花）。
+
+- **2022.12.26 - 针对不同系统适配（桌面、Android、iOS）**
+  - [checkDevice.js](checkDevice.js) 检测设备，根据设备展示不同内容。
+    - 桌面端关闭 AR 入口，增加顶部提示；
+    - Android 关闭 ARKit 入口；
+    - iOS 不用管；

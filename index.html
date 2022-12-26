@@ -7,13 +7,17 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.bootcdn.net/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <div id="prompt">
+      请通过移动设备打开链接
+    </div>
     <div id="p5Element"></div>
     <div class="content">
-      <div class="top">
+      <div class="top"> 
         <div class="title">Web AR 测试</div>
         <div class="des">基于浏览器的 AR 应用</div>
         <div class="des">
@@ -26,11 +30,11 @@
       <div class="title">图像追踪-播放视频</div>
       <div class="des">扫描一个图像，播放视频。</div>
       <div class="device">iOS / Android</div>
-      <a href="mindar-solo.html">
+      <a href="mindar-solo.html" class="ar-content">
         <img class="title-img" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/QiaFan-LiHua.jpg" />
       </a>
       <div class="page">
-        <a href="mindar-solo.html">查看 &rarr;</a>
+        <a href="mindar-solo.html" class="ar-content">查看 &rarr;</a>
       </div>
     </div>
 
@@ -38,12 +42,12 @@
       <div class="title">图像追踪-播放视频</div>
       <div class="des">扫描多个图像，分别播放不同视频。</div>
       <div class="device">iOS / Android</div>
-      <a href="mindar-mult.html">
+      <a href="mindar-mult.html" class="ar-content">
         <img class="title-img" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/QiaFan.jpg" />
         <img class="title-img" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/LiHua.jpg" />
       </a>
       <div class="page">
-        <a href="mindar-mult.html">查看 &rarr;</a>
+        <a href="mindar-mult.html" class="ar-content">查看 &rarr;</a>
       </div>
     </div>
 
@@ -51,12 +55,12 @@
       <div class="title">图像追踪-3D</div>
       <div class="des">扫描图像，显示 3d 模型</div>
       <div class="device">iOS / Android</div>
-      <a href="mindar-3d.html">
+      <a href="mindar-3d.html" class="ar-content">
         <img class="title-img" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/QiaFan.jpg" />
         <img class="title-img" src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/LiHua.jpg" />
       </a>
       <div class="page">
-        <a href="mindar-3d.html"></a>
+        <a href="mindar-3d.html" class="ar-content">查看 &rarr;</a>
       </div>
     </div>
 
@@ -65,12 +69,12 @@
       <div class="des">静态 3D 模型</div>
       <div class="device">iOS 11.0 +</div>
       <div class="title-img">
-        <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/02_Box.usdz" rel="ar">
+        <a class="arkit-content" href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/02_Box.usdz" rel="ar">
           <img src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/02_Box.png" width="100%" />
         </a>
       </div>
       <div class="page">
-        <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/02_Box.usdz">查看 &rarr;</a>
+        <!-- <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/02_Box.usdz" >查看 &rarr;</a> -->
       </div>
     </div>
 
@@ -79,17 +83,19 @@
       <div class="des">动态 3D 模型</div>
       <div class="device">iOS 11.0 +</div>
       <div class="title-img">
-        <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/01_Cloth.usdz" rel="ar">
+        <a class="arkit-content" href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/01_Cloth.usdz" rel="ar">
           <img src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/01_Cloth.png" width="100%" />
         </a>
       </div>
       <div class="title-img">
-        <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_01.usdz" rel="ar">
+        <a class="arkit-content" href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_01.usdz"
+          rel="ar">
           <img src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_01.png" width="100%" />
         </a>
       </div>
       <div class="title-img">
-        <a href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_02.usdz" rel="ar">
+        <a class="arkit-content" href="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_02.usdz"
+          rel="ar">
           <img src="https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/usdz/Characters_02.png" width="100%" />
         </a>
       </div>
@@ -99,6 +105,7 @@
     </div>
 
   </div>
+  <script type="text/javascript" src="checkDevice.js"></script>
   <script type="text/javascript" src="sketch.js"></script>
   <script type="text/javascript" src="playVideo.js"></script>
 </body>

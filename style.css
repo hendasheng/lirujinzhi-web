@@ -83,6 +83,19 @@ a:hover {
   margin-top: 1rem;
 }
 
+#prompt {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  background-color: bisque;
+  color: rgb(171, 113, 43);
+  padding: 0.4rem 0;
+  display: none;
+  font-size:  0.9rem;
+  user-select: none;
+}
+
 @media screen and (max-width: 414px) {
   .container {
     width: 97%;
