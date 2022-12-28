@@ -1,5 +1,21 @@
 # 立入 Web AR 1.0
 
+## 使用
+根据页面中文本标注：
+- **iOS/Android** - 支持的系统；
+- **图像追踪** - 扫描目标图像，显示相应视频、3D 内容；
+- **将 3D 内容渲染到摄像头中** - 无需目标图像，直接将 3D 内容渲染到摄像头中；
+
+## 视频、3D 文件
+- 主要用到**视频、3D** 两种文件，文件大小直接影响加载速度，尽可能缩减文件大小，保持顺畅浏览体验。
+- **3D 动态文件**尽量做成无限循环动画，既能缩减文件大小，还能假装一直在动。
+
+当前文件：
+- 视频（MindAR）：3M/个；
+- 动态 3d 文件（Mind AR）：1.1M、623k；
+- 静态 3d 文件（ARKit）：757kb；
+- 动态 3d 文件（ARKit）：30M；
+
 ## 引用库
 - [MindAR.js](https://hiukim.github.io/mind-ar-js-doc/) - 2D、3D
   - 浏览器运行，全平台支持；
@@ -15,18 +31,7 @@
   - **内容文件格式：**
      - USDZ（通过苹果官方的 AR 创作工具 [Reality Converter](https://developer.apple.com/cn/augmented-reality/tools/) 转换）
 
-- [Device.js](https://github.com/matthewhudson/current-device) - 检测设备
-
-## 文件大小
-文件大小直接影响加载速度，尽可能缩减文件大小，保持顺畅浏览体验。
-
-当前文件容量：
-- 视频（MindAR）：3M/个；
-- 动态 3d 文件（Mind AR）：1.1M、623k；
-- 静态 3d 文件（ARKit）：757kb；
-- 动态 3d 文件（ARKit）：30M；
-
-动态文件（视频/3d）尽量做成无限循环动画，既能缩减文件大小，还能假装一直在动。
+- [Device.js](https://github.com/matthewhudson/current-device) - 检测设备操作系统； 
 
 ## 运行配置
 * 阿里云云虚拟主机；
