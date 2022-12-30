@@ -1,4 +1,4 @@
-# 立入 Web AR 1.0
+# 立入 WebAR 0.1
 
 ## 使用
 根据页面中文本标注：
@@ -9,6 +9,12 @@
 ## 视频、3D 文件
 - 主要用到**视频、3D** 两种文件，文件大小直接影响加载速度，尽可能缩减文件大小，保持顺畅浏览体验。
 - **3D 动态文件**尽量做成无限循环动画，既能缩减文件大小，还能假装一直在动。
+- 文件格式：
+  - **图像追踪**
+    - 视频：MP4
+    - 3D 文件： gltf（嵌入贴图）
+  - **将 3D 内容渲染到摄像头中**
+    - USDZ（通过苹果官方的 AR 创作工具 [Reality Converter](https://developer.apple.com/cn/augmented-reality/tools/) 转换）
 
 当前文件：
 - 视频（MindAR）：3M/个；
@@ -30,6 +36,7 @@
   - 不需要图像追踪，通过摄像头计算空间位置显示 3D 内容；
   - **内容文件格式：**
      - USDZ（通过苹果官方的 AR 创作工具 [Reality Converter](https://developer.apple.com/cn/augmented-reality/tools/) 转换）
+     *[ARKit 不支持的功能](https://github.com/google/usd_from_gltf)*
 
 - [Device.js](https://github.com/matthewhudson/current-device) - 检测设备操作系统； 
 
