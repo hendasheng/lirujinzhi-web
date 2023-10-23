@@ -10,18 +10,21 @@
 </head>
 
 <body>
-    <a-scene mindar-image="imageTargetSrc: Mindjs-Targets\QiaFan-LiHua-MultiTargets.mind;" color-space="sRGB"
-        renderer="colorManagement: true, phtsicallyCorrectLights" vr-mode-ui="enabled: false"
+    <a-scene
+        mindar-image="imageTargetSrc: https://lirujinzhi-web.oss-cn-beijing.aliyuncs.com/media/Mindjs-Targets/QiaFan-LiHua-MultiTargets.mind"
+        color-space="sRGB" renderer="colorManagement: true, phtsicallyCorrectLights" vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false">
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
         <a-assets>
-            <a-asset-item id="qiafan" src="Media\model\QiaFan-dynamic.gltf"></a-asset-item>
-            <a-asset-item id="lihua" src="Media\model\LiHua-dynamic.gltf"></a-asset-item>
+            <a-asset-item id="qiafan"
+                src="https://cdn.glitch.me/7ea32282-46dc-4bfb-a26e-65e68a759579/01_Characters-01.gltf?v=1671788388718"></a-asset-item>
+            <a-asset-item id="lihua"
+                src="https://cdn.glitch.me/7ea32282-46dc-4bfb-a26e-65e68a759579/01_Characters-02.gltf?v=1671799960387"></a-asset-item>
         </a-assets>
 
         <a-entity mindar-image-target="targetIndex: 0">
-            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#qiafan" animation-mixer>
+            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="1 1 1" src="#qiafan" animation-mixer>
             </a-gltf-model>
         </a-entity>
 
